@@ -4,7 +4,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                Articles <small>({{ $articles->count() }})</small>
+                Todos los articulos <small></small>
             </div>
             <div class="card-body">
                 <form action="{{ url('search') }}" method="get">

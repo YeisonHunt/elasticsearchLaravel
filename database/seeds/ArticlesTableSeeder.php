@@ -12,6 +12,6 @@ class ArticlesTableSeeder extends Seeder
     public function run()
     {
         DB::table('articles')->truncate();
-        factory(App\Article::class)->times(50)->create();
+        factory(App\Article::class)->times(30000)->create();
     }
 }

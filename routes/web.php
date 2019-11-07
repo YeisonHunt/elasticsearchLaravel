@@ -12,9 +12,24 @@
  */
 use App\Articles\ArticlesRepository;
 
+Route::get('/quick/search', function(){
+
+    return view('articles.quick', [
+        //'articles' => App\Article::all(),
+
+          'articles'=> App\Article::chunk(100, function($articles){
+            
+        })
+    ]);
+});
+
 Route::get('/', function () {
     return view('articles.index', [
         'articles' => App\Article::all(),
+
+        //'articles'=> App\Article::chunk(10000, function($articles){
+
+        //})
     ]);
 });
 
